@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var input = process.argv.slice(2);
 var repoOwner = input[0];
 var repoName = input[1];
@@ -5,8 +7,9 @@ var repoName = input[1];
 var fs = require("fs");
 var request = require('request');
 
-var GITHUB_USER = "marcossilvabr";
-var GITHUB_TOKEN = "c261192bad9f2a50e222fb3644d7cc39de993b33";
+
+var GITHUB_USER = process.env.GITHUB_USER;
+var GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 var folderPath = "avatars/";
 
